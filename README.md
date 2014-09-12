@@ -17,9 +17,9 @@ Once configured, any `*.coffee` or `*.litcoffee` files placed in `src/main/asset
 
 Supported settings:
 
-* `sourceMaps` When set, generates sourceMap files. Defaults to `true`.
+* `sourceMap` When set, generates sourceMap files. Defaults to `true`.
 
-  `CoffeeScriptKeys.sourceMaps := true`
+  `CoffeeScriptKeys.sourceMap := true`
 
 * `bare` When set, generates JavaScript without the [top-level function safety wrapper](http://coffeescript.org/#lexical-scope). Defaults to `false`.
 
