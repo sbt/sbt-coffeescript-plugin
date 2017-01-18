@@ -11,8 +11,8 @@ scalaVersion := "2.10.4"
 scalacOptions += "-feature"
 
 libraryDependencies ++= Seq(
-  "org.webjars" % "coffee-script-node" % "1.7.1",
-  "org.webjars" % "mkdirp" % "0.3.5"
+  "org.webjars" % "coffee-script-node" % "1.11.0",
+  "org.webjars.npm" % "mkdirp" % "0.5.1"
 )
 
 resolvers ++= Seq(
@@ -23,7 +23,7 @@ resolvers ++= Seq(
   Resolver.mavenLocal
 )
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.0.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.3")
 
 publishMavenStyle := false
 

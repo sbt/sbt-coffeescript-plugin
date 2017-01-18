@@ -90,9 +90,9 @@
                 problems.push({
                     message: err.message,
                     severity: "error",
-                    lineNumber: err.location.first_line,
-                    characterOffset: err.location.first_column,
-                    lineContent: contents.split("\n")[err.location.first_line],
+                    lineNumber: err.locationData.first_line,
+                    characterOffset: err.locationData.first_column,
+                    lineContent: contents.split("\n")[err.locationData.first_line],
                     source: input
                 });
                 results.push({
