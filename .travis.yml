@@ -1,5 +1,14 @@
-jdk: openjdk8
 language: scala
 scala:
   - 2.10.4
 script: sbt scripted
+env:
+  - JDK=oraclejdk8
+  - JDK=openjdk8
+before_script:
+  - jdk_switcher use $JDK
+exclude:
+  - scala: 2.10.4
+    env: JDK=oraclejdk8
+  - scala: 2.10.4
+    env: JDK=openjdk8
