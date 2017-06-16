@@ -40,18 +40,23 @@ object SbtCoffeeScript extends AutoPlugin {
     ).toString()
   )
 
+  override def buildSettings = inTask(coffeescript)(
+    SbtJsTask.jsTaskSpecificUnscopedBuildSettings ++ Seq(
+      moduleName := "coffeescript",
+      shellFile := getClass.getClassLoader.getResource("coffee.js")
+
+    )
+  )
+
   override def projectSettings = Seq(
     bare := false,
     sourceMap := true
 
   ) ++ inTask(coffeescript)(
-    SbtJsTask.jsTaskSpecificUnscopedSettings ++
+    SbtJsTask.jsTaskSpecificUnscopedProjectSettings ++
       inConfig(Assets)(coffeeScriptUnscopedSettings) ++
       inConfig(TestAssets)(coffeeScriptUnscopedSettings) ++
       Seq(
-        moduleName := "coffeescript",
-        shellFile := getClass.getClassLoader.getResource("coffee.js"),
-
         taskMessage in Assets := "CoffeeScript compiling",
         taskMessage in TestAssets := "CoffeeScript test compiling"
       )
