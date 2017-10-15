@@ -7,7 +7,7 @@ An SBT plugin to compile [CoffeeScript](http://coffeescript.org/) sources to Jav
 
 To use this plugin use the addSbtPlugin command within your project's `plugins.sbt` file:
 
-    addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.1")
+    addSbtPlugin("com.typesafe.sbt" % "sbt-coffeescript" % "1.0.2")
 
 Your project's build file also needs to enable sbt-web plugins. For example with build.sbt:
 
@@ -27,4 +27,4 @@ Supported settings:
 
 The plugin is built on top of [JavaScript Engine](https://github.com/typesafehub/js-engine) which supports different JavaScript runtimes.
 
-&copy; Typesafe Inc., 2013, 2014
+&copy; 2013-2017 [Lightbend Inc.](https://www.lightbend.com)
